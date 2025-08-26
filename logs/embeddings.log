@@ -1,0 +1,719 @@
+2025-08-26 16:12:35,249 - INFO - ChromaDB configurado em: data\embeddings
+2025-08-26 16:12:35,250 - INFO - Iniciando processamento do PDF: data/documents/NT.00020.EQTL-05-Conexao-de-Micro-e-Minigeracao-Distribuida-ao-Sistema-de-Distribuicao.pdf
+2025-08-26 16:12:37,076 - INFO - Texto extraído do PDF: 200276 caracteres
+2025-08-26 16:12:37,078 - INFO - Texto dividido em 236 chunks
+2025-08-26 16:12:37,125 - INFO - Nova coleção 'documents' criada
+2025-08-26 16:12:37,126 - INFO - Processando chunk 1/236
+2025-08-26 16:12:43,850 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:44,084 - INFO - Chunk 1 processado com sucesso
+2025-08-26 16:12:44,084 - INFO - Processando chunk 2/236
+2025-08-26 16:12:45,831 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:45,852 - INFO - Chunk 2 processado com sucesso
+2025-08-26 16:12:45,853 - INFO - Processando chunk 3/236
+2025-08-26 16:12:46,273 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:46,292 - INFO - Chunk 3 processado com sucesso
+2025-08-26 16:12:46,293 - INFO - Processando chunk 4/236
+2025-08-26 16:12:47,453 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:47,470 - INFO - Chunk 4 processado com sucesso
+2025-08-26 16:12:47,470 - INFO - Processando chunk 5/236
+2025-08-26 16:12:49,210 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:49,225 - INFO - Chunk 5 processado com sucesso
+2025-08-26 16:12:49,225 - INFO - Processando chunk 6/236
+2025-08-26 16:12:49,550 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:49,604 - INFO - Chunk 6 processado com sucesso
+2025-08-26 16:12:49,604 - INFO - Processando chunk 7/236
+2025-08-26 16:12:50,351 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:50,365 - INFO - Chunk 7 processado com sucesso
+2025-08-26 16:12:50,366 - INFO - Processando chunk 8/236
+2025-08-26 16:12:51,636 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:51,650 - INFO - Chunk 8 processado com sucesso
+2025-08-26 16:12:51,650 - INFO - Processando chunk 9/236
+2025-08-26 16:12:52,392 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:52,408 - INFO - Chunk 9 processado com sucesso
+2025-08-26 16:12:52,408 - INFO - Processando chunk 10/236
+2025-08-26 16:12:54,197 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:54,222 - INFO - Chunk 10 processado com sucesso
+2025-08-26 16:12:54,223 - INFO - Processando chunk 11/236
+2025-08-26 16:12:54,527 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:54,541 - INFO - Chunk 11 processado com sucesso
+2025-08-26 16:12:54,542 - INFO - Processando chunk 12/236
+2025-08-26 16:12:56,135 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:56,152 - INFO - Chunk 12 processado com sucesso
+2025-08-26 16:12:56,152 - INFO - Processando chunk 13/236
+2025-08-26 16:12:56,643 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:56,661 - INFO - Chunk 13 processado com sucesso
+2025-08-26 16:12:56,662 - INFO - Processando chunk 14/236
+2025-08-26 16:12:57,345 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:57,369 - INFO - Chunk 14 processado com sucesso
+2025-08-26 16:12:57,369 - INFO - Processando chunk 15/236
+2025-08-26 16:12:57,783 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:57,803 - INFO - Chunk 15 processado com sucesso
+2025-08-26 16:12:57,804 - INFO - Processando chunk 16/236
+2025-08-26 16:12:58,117 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:58,144 - INFO - Chunk 16 processado com sucesso
+2025-08-26 16:12:58,144 - INFO - Processando chunk 17/236
+2025-08-26 16:12:58,875 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:58,899 - INFO - Chunk 17 processado com sucesso
+2025-08-26 16:12:58,899 - INFO - Processando chunk 18/236
+2025-08-26 16:12:59,263 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:59,279 - INFO - Chunk 18 processado com sucesso
+2025-08-26 16:12:59,281 - INFO - Processando chunk 19/236
+2025-08-26 16:12:59,599 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:12:59,618 - INFO - Chunk 19 processado com sucesso
+2025-08-26 16:12:59,619 - INFO - Processando chunk 20/236
+2025-08-26 16:12:59,985 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:00,026 - INFO - Chunk 20 processado com sucesso
+2025-08-26 16:13:00,027 - INFO - Processando chunk 21/236
+2025-08-26 16:13:01,235 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:01,258 - INFO - Chunk 21 processado com sucesso
+2025-08-26 16:13:01,258 - INFO - Processando chunk 22/236
+2025-08-26 16:13:01,629 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:01,649 - INFO - Chunk 22 processado com sucesso
+2025-08-26 16:13:01,649 - INFO - Processando chunk 23/236
+2025-08-26 16:13:02,032 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:02,063 - INFO - Chunk 23 processado com sucesso
+2025-08-26 16:13:02,063 - INFO - Processando chunk 24/236
+2025-08-26 16:13:02,392 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:02,416 - INFO - Chunk 24 processado com sucesso
+2025-08-26 16:13:02,416 - INFO - Processando chunk 25/236
+2025-08-26 16:13:02,843 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:02,866 - INFO - Chunk 25 processado com sucesso
+2025-08-26 16:13:02,866 - INFO - Processando chunk 26/236
+2025-08-26 16:13:03,430 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:03,467 - INFO - Chunk 26 processado com sucesso
+2025-08-26 16:13:03,467 - INFO - Processando chunk 27/236
+2025-08-26 16:13:05,017 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:05,051 - INFO - Chunk 27 processado com sucesso
+2025-08-26 16:13:05,051 - INFO - Processando chunk 28/236
+2025-08-26 16:13:05,391 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:05,410 - INFO - Chunk 28 processado com sucesso
+2025-08-26 16:13:05,410 - INFO - Processando chunk 29/236
+2025-08-26 16:13:05,766 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:05,781 - INFO - Chunk 29 processado com sucesso
+2025-08-26 16:13:05,782 - INFO - Processando chunk 30/236
+2025-08-26 16:13:06,259 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:06,283 - INFO - Chunk 30 processado com sucesso
+2025-08-26 16:13:06,283 - INFO - Processando chunk 31/236
+2025-08-26 16:13:06,587 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:06,613 - INFO - Chunk 31 processado com sucesso
+2025-08-26 16:13:06,614 - INFO - Processando chunk 32/236
+2025-08-26 16:13:07,042 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:07,061 - INFO - Chunk 32 processado com sucesso
+2025-08-26 16:13:07,061 - INFO - Processando chunk 33/236
+2025-08-26 16:13:07,471 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:07,513 - INFO - Chunk 33 processado com sucesso
+2025-08-26 16:13:07,513 - INFO - Processando chunk 34/236
+2025-08-26 16:13:07,922 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:07,953 - INFO - Chunk 34 processado com sucesso
+2025-08-26 16:13:07,953 - INFO - Processando chunk 35/236
+2025-08-26 16:13:08,457 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:08,477 - INFO - Chunk 35 processado com sucesso
+2025-08-26 16:13:08,478 - INFO - Processando chunk 36/236
+2025-08-26 16:13:08,813 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:08,836 - INFO - Chunk 36 processado com sucesso
+2025-08-26 16:13:08,837 - INFO - Processando chunk 37/236
+2025-08-26 16:13:09,376 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:09,397 - INFO - Chunk 37 processado com sucesso
+2025-08-26 16:13:09,397 - INFO - Processando chunk 38/236
+2025-08-26 16:13:09,792 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:09,821 - INFO - Chunk 38 processado com sucesso
+2025-08-26 16:13:09,834 - INFO - Processando chunk 39/236
+2025-08-26 16:13:10,355 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:10,375 - INFO - Chunk 39 processado com sucesso
+2025-08-26 16:13:10,375 - INFO - Processando chunk 40/236
+2025-08-26 16:13:10,754 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:10,774 - INFO - Chunk 40 processado com sucesso
+2025-08-26 16:13:10,774 - INFO - Processando chunk 41/236
+2025-08-26 16:13:11,134 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:11,158 - INFO - Chunk 41 processado com sucesso
+2025-08-26 16:13:11,158 - INFO - Processando chunk 42/236
+2025-08-26 16:13:11,538 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:11,567 - INFO - Chunk 42 processado com sucesso
+2025-08-26 16:13:11,567 - INFO - Processando chunk 43/236
+2025-08-26 16:13:11,849 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:11,888 - INFO - Chunk 43 processado com sucesso
+2025-08-26 16:13:11,889 - INFO - Processando chunk 44/236
+2025-08-26 16:13:12,358 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:12,387 - INFO - Chunk 44 processado com sucesso
+2025-08-26 16:13:12,387 - INFO - Processando chunk 45/236
+2025-08-26 16:13:12,713 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:12,736 - INFO - Chunk 45 processado com sucesso
+2025-08-26 16:13:12,736 - INFO - Processando chunk 46/236
+2025-08-26 16:13:13,178 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:13,197 - INFO - Chunk 46 processado com sucesso
+2025-08-26 16:13:13,197 - INFO - Processando chunk 47/236
+2025-08-26 16:13:13,907 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:13,932 - INFO - Chunk 47 processado com sucesso
+2025-08-26 16:13:13,932 - INFO - Processando chunk 48/236
+2025-08-26 16:13:14,636 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:14,669 - INFO - Chunk 48 processado com sucesso
+2025-08-26 16:13:14,669 - INFO - Processando chunk 49/236
+2025-08-26 16:13:15,133 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:15,158 - INFO - Chunk 49 processado com sucesso
+2025-08-26 16:13:15,158 - INFO - Processando chunk 50/236
+2025-08-26 16:13:15,451 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:15,465 - INFO - Chunk 50 processado com sucesso
+2025-08-26 16:13:15,465 - INFO - Processando chunk 51/236
+2025-08-26 16:13:15,799 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:15,823 - INFO - Chunk 51 processado com sucesso
+2025-08-26 16:13:15,823 - INFO - Processando chunk 52/236
+2025-08-26 16:13:16,149 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:16,167 - INFO - Chunk 52 processado com sucesso
+2025-08-26 16:13:16,167 - INFO - Processando chunk 53/236
+2025-08-26 16:13:16,538 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:16,555 - INFO - Chunk 53 processado com sucesso
+2025-08-26 16:13:16,555 - INFO - Processando chunk 54/236
+2025-08-26 16:13:16,925 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:16,957 - INFO - Chunk 54 processado com sucesso
+2025-08-26 16:13:16,957 - INFO - Processando chunk 55/236
+2025-08-26 16:13:17,364 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:17,386 - INFO - Chunk 55 processado com sucesso
+2025-08-26 16:13:17,387 - INFO - Processando chunk 56/236
+2025-08-26 16:13:17,721 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:17,747 - INFO - Chunk 56 processado com sucesso
+2025-08-26 16:13:17,748 - INFO - Processando chunk 57/236
+2025-08-26 16:13:18,094 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:18,119 - INFO - Chunk 57 processado com sucesso
+2025-08-26 16:13:18,119 - INFO - Processando chunk 58/236
+2025-08-26 16:13:18,421 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:18,448 - INFO - Chunk 58 processado com sucesso
+2025-08-26 16:13:18,449 - INFO - Processando chunk 59/236
+2025-08-26 16:13:18,771 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:18,806 - INFO - Chunk 59 processado com sucesso
+2025-08-26 16:13:18,807 - INFO - Processando chunk 60/236
+2025-08-26 16:13:19,201 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:19,224 - INFO - Chunk 60 processado com sucesso
+2025-08-26 16:13:19,225 - INFO - Processando chunk 61/236
+2025-08-26 16:13:19,551 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:19,569 - INFO - Chunk 61 processado com sucesso
+2025-08-26 16:13:19,569 - INFO - Processando chunk 62/236
+2025-08-26 16:13:20,278 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:20,303 - INFO - Chunk 62 processado com sucesso
+2025-08-26 16:13:20,304 - INFO - Processando chunk 63/236
+2025-08-26 16:13:20,666 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:20,693 - INFO - Chunk 63 processado com sucesso
+2025-08-26 16:13:20,694 - INFO - Processando chunk 64/236
+2025-08-26 16:13:21,114 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:21,147 - INFO - Chunk 64 processado com sucesso
+2025-08-26 16:13:21,148 - INFO - Processando chunk 65/236
+2025-08-26 16:13:21,486 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:21,510 - INFO - Chunk 65 processado com sucesso
+2025-08-26 16:13:21,511 - INFO - Processando chunk 66/236
+2025-08-26 16:13:21,867 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:21,895 - INFO - Chunk 66 processado com sucesso
+2025-08-26 16:13:21,895 - INFO - Processando chunk 67/236
+2025-08-26 16:13:22,361 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:22,381 - INFO - Chunk 67 processado com sucesso
+2025-08-26 16:13:22,382 - INFO - Processando chunk 68/236
+2025-08-26 16:13:22,834 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:22,872 - INFO - Chunk 68 processado com sucesso
+2025-08-26 16:13:22,873 - INFO - Processando chunk 69/236
+2025-08-26 16:13:23,256 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:23,286 - INFO - Chunk 69 processado com sucesso
+2025-08-26 16:13:23,286 - INFO - Processando chunk 70/236
+2025-08-26 16:13:23,722 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:23,749 - INFO - Chunk 70 processado com sucesso
+2025-08-26 16:13:23,750 - INFO - Processando chunk 71/236
+2025-08-26 16:13:24,645 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:24,663 - INFO - Chunk 71 processado com sucesso
+2025-08-26 16:13:24,664 - INFO - Processando chunk 72/236
+2025-08-26 16:13:25,069 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:25,095 - INFO - Chunk 72 processado com sucesso
+2025-08-26 16:13:25,095 - INFO - Processando chunk 73/236
+2025-08-26 16:13:25,678 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:25,703 - INFO - Chunk 73 processado com sucesso
+2025-08-26 16:13:25,703 - INFO - Processando chunk 74/236
+2025-08-26 16:13:26,111 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:26,130 - INFO - Chunk 74 processado com sucesso
+2025-08-26 16:13:26,130 - INFO - Processando chunk 75/236
+2025-08-26 16:13:28,919 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:28,947 - INFO - Chunk 75 processado com sucesso
+2025-08-26 16:13:28,947 - INFO - Processando chunk 76/236
+2025-08-26 16:13:29,266 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:29,283 - INFO - Chunk 76 processado com sucesso
+2025-08-26 16:13:29,283 - INFO - Processando chunk 77/236
+2025-08-26 16:13:29,760 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:29,784 - INFO - Chunk 77 processado com sucesso
+2025-08-26 16:13:29,784 - INFO - Processando chunk 78/236
+2025-08-26 16:13:30,482 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:30,504 - INFO - Chunk 78 processado com sucesso
+2025-08-26 16:13:30,504 - INFO - Processando chunk 79/236
+2025-08-26 16:13:30,854 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:30,886 - INFO - Chunk 79 processado com sucesso
+2025-08-26 16:13:30,886 - INFO - Processando chunk 80/236
+2025-08-26 16:13:31,459 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:31,483 - INFO - Chunk 80 processado com sucesso
+2025-08-26 16:13:31,484 - INFO - Processando chunk 81/236
+2025-08-26 16:13:31,936 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:31,954 - INFO - Chunk 81 processado com sucesso
+2025-08-26 16:13:31,955 - INFO - Processando chunk 82/236
+2025-08-26 16:13:32,278 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:32,301 - INFO - Chunk 82 processado com sucesso
+2025-08-26 16:13:32,301 - INFO - Processando chunk 83/236
+2025-08-26 16:13:32,686 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:32,715 - INFO - Chunk 83 processado com sucesso
+2025-08-26 16:13:32,715 - INFO - Processando chunk 84/236
+2025-08-26 16:13:34,409 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:34,443 - INFO - Chunk 84 processado com sucesso
+2025-08-26 16:13:34,443 - INFO - Processando chunk 85/236
+2025-08-26 16:13:34,922 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:34,946 - INFO - Chunk 85 processado com sucesso
+2025-08-26 16:13:34,947 - INFO - Processando chunk 86/236
+2025-08-26 16:13:35,244 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:35,263 - INFO - Chunk 86 processado com sucesso
+2025-08-26 16:13:35,263 - INFO - Processando chunk 87/236
+2025-08-26 16:13:35,604 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:35,618 - INFO - Chunk 87 processado com sucesso
+2025-08-26 16:13:35,618 - INFO - Processando chunk 88/236
+2025-08-26 16:13:36,139 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:36,168 - INFO - Chunk 88 processado com sucesso
+2025-08-26 16:13:36,168 - INFO - Processando chunk 89/236
+2025-08-26 16:13:36,519 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:36,539 - INFO - Chunk 89 processado com sucesso
+2025-08-26 16:13:36,540 - INFO - Processando chunk 90/236
+2025-08-26 16:13:36,874 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:36,905 - INFO - Chunk 90 processado com sucesso
+2025-08-26 16:13:36,906 - INFO - Processando chunk 91/236
+2025-08-26 16:13:37,264 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:37,295 - INFO - Chunk 91 processado com sucesso
+2025-08-26 16:13:37,296 - INFO - Processando chunk 92/236
+2025-08-26 16:13:37,699 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:37,716 - INFO - Chunk 92 processado com sucesso
+2025-08-26 16:13:37,717 - INFO - Processando chunk 93/236
+2025-08-26 16:13:38,045 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:38,077 - INFO - Chunk 93 processado com sucesso
+2025-08-26 16:13:38,077 - INFO - Processando chunk 94/236
+2025-08-26 16:13:38,680 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:38,713 - INFO - Chunk 94 processado com sucesso
+2025-08-26 16:13:38,713 - INFO - Processando chunk 95/236
+2025-08-26 16:13:39,086 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:39,114 - INFO - Chunk 95 processado com sucesso
+2025-08-26 16:13:39,114 - INFO - Processando chunk 96/236
+2025-08-26 16:13:39,513 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:39,540 - INFO - Chunk 96 processado com sucesso
+2025-08-26 16:13:39,541 - INFO - Processando chunk 97/236
+2025-08-26 16:13:39,858 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:39,886 - INFO - Chunk 97 processado com sucesso
+2025-08-26 16:13:39,886 - INFO - Processando chunk 98/236
+2025-08-26 16:13:40,252 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:40,278 - INFO - Chunk 98 processado com sucesso
+2025-08-26 16:13:40,279 - INFO - Processando chunk 99/236
+2025-08-26 16:13:40,615 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:40,643 - INFO - Chunk 99 processado com sucesso
+2025-08-26 16:13:40,643 - INFO - Processando chunk 100/236
+2025-08-26 16:13:40,936 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:40,981 - INFO - Chunk 100 processado com sucesso
+2025-08-26 16:13:40,982 - INFO - Processando chunk 101/236
+2025-08-26 16:13:41,454 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:41,481 - INFO - Chunk 101 processado com sucesso
+2025-08-26 16:13:41,482 - INFO - Processando chunk 102/236
+2025-08-26 16:13:42,017 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:42,043 - INFO - Chunk 102 processado com sucesso
+2025-08-26 16:13:42,043 - INFO - Processando chunk 103/236
+2025-08-26 16:13:42,573 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:42,601 - INFO - Chunk 103 processado com sucesso
+2025-08-26 16:13:42,601 - INFO - Processando chunk 104/236
+2025-08-26 16:13:43,126 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:43,153 - INFO - Chunk 104 processado com sucesso
+2025-08-26 16:13:43,154 - INFO - Processando chunk 105/236
+2025-08-26 16:13:43,984 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:44,017 - INFO - Chunk 105 processado com sucesso
+2025-08-26 16:13:44,017 - INFO - Processando chunk 106/236
+2025-08-26 16:13:44,354 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:44,376 - INFO - Chunk 106 processado com sucesso
+2025-08-26 16:13:44,376 - INFO - Processando chunk 107/236
+2025-08-26 16:13:45,033 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:45,069 - INFO - Chunk 107 processado com sucesso
+2025-08-26 16:13:45,070 - INFO - Processando chunk 108/236
+2025-08-26 16:13:45,588 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:45,611 - INFO - Chunk 108 processado com sucesso
+2025-08-26 16:13:45,612 - INFO - Processando chunk 109/236
+2025-08-26 16:13:46,024 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:46,049 - INFO - Chunk 109 processado com sucesso
+2025-08-26 16:13:46,049 - INFO - Processando chunk 110/236
+2025-08-26 16:13:46,352 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:46,379 - INFO - Chunk 110 processado com sucesso
+2025-08-26 16:13:46,379 - INFO - Processando chunk 111/236
+2025-08-26 16:13:47,497 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:47,537 - INFO - Chunk 111 processado com sucesso
+2025-08-26 16:13:47,537 - INFO - Processando chunk 112/236
+2025-08-26 16:13:48,148 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:48,166 - INFO - Chunk 112 processado com sucesso
+2025-08-26 16:13:48,166 - INFO - Processando chunk 113/236
+2025-08-26 16:13:48,744 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:48,778 - INFO - Chunk 113 processado com sucesso
+2025-08-26 16:13:48,778 - INFO - Processando chunk 114/236
+2025-08-26 16:13:49,231 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:49,257 - INFO - Chunk 114 processado com sucesso
+2025-08-26 16:13:49,258 - INFO - Processando chunk 115/236
+2025-08-26 16:13:49,651 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:49,685 - INFO - Chunk 115 processado com sucesso
+2025-08-26 16:13:49,685 - INFO - Processando chunk 116/236
+2025-08-26 16:13:50,012 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:50,033 - INFO - Chunk 116 processado com sucesso
+2025-08-26 16:13:50,033 - INFO - Processando chunk 117/236
+2025-08-26 16:13:50,375 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:50,394 - INFO - Chunk 117 processado com sucesso
+2025-08-26 16:13:50,394 - INFO - Processando chunk 118/236
+2025-08-26 16:13:50,787 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:50,821 - INFO - Chunk 118 processado com sucesso
+2025-08-26 16:13:50,822 - INFO - Processando chunk 119/236
+2025-08-26 16:13:51,144 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:51,169 - INFO - Chunk 119 processado com sucesso
+2025-08-26 16:13:51,170 - INFO - Processando chunk 120/236
+2025-08-26 16:13:51,566 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:51,599 - INFO - Chunk 120 processado com sucesso
+2025-08-26 16:13:51,599 - INFO - Processando chunk 121/236
+2025-08-26 16:13:52,017 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:52,044 - INFO - Chunk 121 processado com sucesso
+2025-08-26 16:13:52,045 - INFO - Processando chunk 122/236
+2025-08-26 16:13:52,468 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:52,495 - INFO - Chunk 122 processado com sucesso
+2025-08-26 16:13:52,495 - INFO - Processando chunk 123/236
+2025-08-26 16:13:53,074 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:53,095 - INFO - Chunk 123 processado com sucesso
+2025-08-26 16:13:53,095 - INFO - Processando chunk 124/236
+2025-08-26 16:13:53,458 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:53,484 - INFO - Chunk 124 processado com sucesso
+2025-08-26 16:13:53,484 - INFO - Processando chunk 125/236
+2025-08-26 16:13:53,822 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:53,846 - INFO - Chunk 125 processado com sucesso
+2025-08-26 16:13:53,846 - INFO - Processando chunk 126/236
+2025-08-26 16:13:54,174 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:54,201 - INFO - Chunk 126 processado com sucesso
+2025-08-26 16:13:54,201 - INFO - Processando chunk 127/236
+2025-08-26 16:13:54,509 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:54,531 - INFO - Chunk 127 processado com sucesso
+2025-08-26 16:13:54,531 - INFO - Processando chunk 128/236
+2025-08-26 16:13:54,996 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:55,025 - INFO - Chunk 128 processado com sucesso
+2025-08-26 16:13:55,026 - INFO - Processando chunk 129/236
+2025-08-26 16:13:55,357 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:55,382 - INFO - Chunk 129 processado com sucesso
+2025-08-26 16:13:55,382 - INFO - Processando chunk 130/236
+2025-08-26 16:13:55,777 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:55,804 - INFO - Chunk 130 processado com sucesso
+2025-08-26 16:13:55,804 - INFO - Processando chunk 131/236
+2025-08-26 16:13:56,321 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:56,346 - INFO - Chunk 131 processado com sucesso
+2025-08-26 16:13:56,346 - INFO - Processando chunk 132/236
+2025-08-26 16:13:56,736 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:56,770 - INFO - Chunk 132 processado com sucesso
+2025-08-26 16:13:56,771 - INFO - Processando chunk 133/236
+2025-08-26 16:13:57,120 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:57,144 - INFO - Chunk 133 processado com sucesso
+2025-08-26 16:13:57,145 - INFO - Processando chunk 134/236
+2025-08-26 16:13:57,479 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:57,502 - INFO - Chunk 134 processado com sucesso
+2025-08-26 16:13:57,502 - INFO - Processando chunk 135/236
+2025-08-26 16:13:57,817 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:57,836 - INFO - Chunk 135 processado com sucesso
+2025-08-26 16:13:57,837 - INFO - Processando chunk 136/236
+2025-08-26 16:13:58,924 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:58,954 - INFO - Chunk 136 processado com sucesso
+2025-08-26 16:13:58,955 - INFO - Processando chunk 137/236
+2025-08-26 16:13:59,463 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:59,485 - INFO - Chunk 137 processado com sucesso
+2025-08-26 16:13:59,485 - INFO - Processando chunk 138/236
+2025-08-26 16:13:59,843 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:13:59,867 - INFO - Chunk 138 processado com sucesso
+2025-08-26 16:13:59,867 - INFO - Processando chunk 139/236
+2025-08-26 16:14:00,210 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:00,240 - INFO - Chunk 139 processado com sucesso
+2025-08-26 16:14:00,240 - INFO - Processando chunk 140/236
+2025-08-26 16:14:00,554 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:00,584 - INFO - Chunk 140 processado com sucesso
+2025-08-26 16:14:00,584 - INFO - Processando chunk 141/236
+2025-08-26 16:14:00,925 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:00,952 - INFO - Chunk 141 processado com sucesso
+2025-08-26 16:14:00,952 - INFO - Processando chunk 142/236
+2025-08-26 16:14:01,346 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:01,368 - INFO - Chunk 142 processado com sucesso
+2025-08-26 16:14:01,369 - INFO - Processando chunk 143/236
+2025-08-26 16:14:01,711 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:01,744 - INFO - Chunk 143 processado com sucesso
+2025-08-26 16:14:01,744 - INFO - Processando chunk 144/236
+2025-08-26 16:14:02,200 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:02,228 - INFO - Chunk 144 processado com sucesso
+2025-08-26 16:14:02,228 - INFO - Processando chunk 145/236
+2025-08-26 16:14:02,617 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:02,646 - INFO - Chunk 145 processado com sucesso
+2025-08-26 16:14:02,646 - INFO - Processando chunk 146/236
+2025-08-26 16:14:03,071 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:03,099 - INFO - Chunk 146 processado com sucesso
+2025-08-26 16:14:03,099 - INFO - Processando chunk 147/236
+2025-08-26 16:14:03,664 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:03,693 - INFO - Chunk 147 processado com sucesso
+2025-08-26 16:14:03,693 - INFO - Processando chunk 148/236
+2025-08-26 16:14:04,366 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:04,399 - INFO - Chunk 148 processado com sucesso
+2025-08-26 16:14:04,399 - INFO - Processando chunk 149/236
+2025-08-26 16:14:04,894 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:04,918 - INFO - Chunk 149 processado com sucesso
+2025-08-26 16:14:04,918 - INFO - Processando chunk 150/236
+2025-08-26 16:14:05,241 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:05,269 - INFO - Chunk 150 processado com sucesso
+2025-08-26 16:14:05,269 - INFO - Processando chunk 151/236
+2025-08-26 16:14:05,637 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:05,665 - INFO - Chunk 151 processado com sucesso
+2025-08-26 16:14:05,666 - INFO - Processando chunk 152/236
+2025-08-26 16:14:06,095 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:06,123 - INFO - Chunk 152 processado com sucesso
+2025-08-26 16:14:06,123 - INFO - Processando chunk 153/236
+2025-08-26 16:14:06,827 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:06,856 - INFO - Chunk 153 processado com sucesso
+2025-08-26 16:14:06,857 - INFO - Processando chunk 154/236
+2025-08-26 16:14:07,298 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:07,325 - INFO - Chunk 154 processado com sucesso
+2025-08-26 16:14:07,325 - INFO - Processando chunk 155/236
+2025-08-26 16:14:08,386 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:08,414 - INFO - Chunk 155 processado com sucesso
+2025-08-26 16:14:08,415 - INFO - Processando chunk 156/236
+2025-08-26 16:14:08,825 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:08,847 - INFO - Chunk 156 processado com sucesso
+2025-08-26 16:14:08,847 - INFO - Processando chunk 157/236
+2025-08-26 16:14:09,268 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:09,294 - INFO - Chunk 157 processado com sucesso
+2025-08-26 16:14:09,294 - INFO - Processando chunk 158/236
+2025-08-26 16:14:09,623 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:09,642 - INFO - Chunk 158 processado com sucesso
+2025-08-26 16:14:09,642 - INFO - Processando chunk 159/236
+2025-08-26 16:14:09,939 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:09,970 - INFO - Chunk 159 processado com sucesso
+2025-08-26 16:14:09,971 - INFO - Processando chunk 160/236
+2025-08-26 16:14:10,289 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:10,320 - INFO - Chunk 160 processado com sucesso
+2025-08-26 16:14:10,320 - INFO - Processando chunk 161/236
+2025-08-26 16:14:10,748 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:10,770 - INFO - Chunk 161 processado com sucesso
+2025-08-26 16:14:10,771 - INFO - Processando chunk 162/236
+2025-08-26 16:14:11,090 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:11,114 - INFO - Chunk 162 processado com sucesso
+2025-08-26 16:14:11,115 - INFO - Processando chunk 163/236
+2025-08-26 16:14:11,640 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:11,673 - INFO - Chunk 163 processado com sucesso
+2025-08-26 16:14:11,673 - INFO - Processando chunk 164/236
+2025-08-26 16:14:11,978 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:12,011 - INFO - Chunk 164 processado com sucesso
+2025-08-26 16:14:12,011 - INFO - Processando chunk 165/236
+2025-08-26 16:14:12,350 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:12,379 - INFO - Chunk 165 processado com sucesso
+2025-08-26 16:14:12,379 - INFO - Processando chunk 166/236
+2025-08-26 16:14:13,001 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:13,034 - INFO - Chunk 166 processado com sucesso
+2025-08-26 16:14:13,034 - INFO - Processando chunk 167/236
+2025-08-26 16:14:13,326 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:13,354 - INFO - Chunk 167 processado com sucesso
+2025-08-26 16:14:13,355 - INFO - Processando chunk 168/236
+2025-08-26 16:14:13,884 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:13,918 - INFO - Chunk 168 processado com sucesso
+2025-08-26 16:14:13,919 - INFO - Processando chunk 169/236
+2025-08-26 16:14:14,238 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:14,268 - INFO - Chunk 169 processado com sucesso
+2025-08-26 16:14:14,268 - INFO - Processando chunk 170/236
+2025-08-26 16:14:14,605 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:14,643 - INFO - Chunk 170 processado com sucesso
+2025-08-26 16:14:14,643 - INFO - Processando chunk 171/236
+2025-08-26 16:14:15,181 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:15,205 - INFO - Chunk 171 processado com sucesso
+2025-08-26 16:14:15,206 - INFO - Processando chunk 172/236
+2025-08-26 16:14:15,595 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:15,620 - INFO - Chunk 172 processado com sucesso
+2025-08-26 16:14:15,621 - INFO - Processando chunk 173/236
+2025-08-26 16:14:16,019 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:16,040 - INFO - Chunk 173 processado com sucesso
+2025-08-26 16:14:16,041 - INFO - Processando chunk 174/236
+2025-08-26 16:14:16,551 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:16,581 - INFO - Chunk 174 processado com sucesso
+2025-08-26 16:14:16,581 - INFO - Processando chunk 175/236
+2025-08-26 16:14:17,005 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:17,045 - INFO - Chunk 175 processado com sucesso
+2025-08-26 16:14:17,045 - INFO - Processando chunk 176/236
+2025-08-26 16:14:17,414 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:17,434 - INFO - Chunk 176 processado com sucesso
+2025-08-26 16:14:17,434 - INFO - Processando chunk 177/236
+2025-08-26 16:14:17,856 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:17,880 - INFO - Chunk 177 processado com sucesso
+2025-08-26 16:14:17,880 - INFO - Processando chunk 178/236
+2025-08-26 16:14:18,239 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:18,258 - INFO - Chunk 178 processado com sucesso
+2025-08-26 16:14:18,258 - INFO - Processando chunk 179/236
+2025-08-26 16:14:18,850 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:18,891 - INFO - Chunk 179 processado com sucesso
+2025-08-26 16:14:18,891 - INFO - Processando chunk 180/236
+2025-08-26 16:14:19,230 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:19,261 - INFO - Chunk 180 processado com sucesso
+2025-08-26 16:14:19,262 - INFO - Processando chunk 181/236
+2025-08-26 16:14:19,766 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:19,791 - INFO - Chunk 181 processado com sucesso
+2025-08-26 16:14:19,791 - INFO - Processando chunk 182/236
+2025-08-26 16:14:20,087 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:20,114 - INFO - Chunk 182 processado com sucesso
+2025-08-26 16:14:20,114 - INFO - Processando chunk 183/236
+2025-08-26 16:14:20,489 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:20,517 - INFO - Chunk 183 processado com sucesso
+2025-08-26 16:14:20,517 - INFO - Processando chunk 184/236
+2025-08-26 16:14:20,979 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:21,013 - INFO - Chunk 184 processado com sucesso
+2025-08-26 16:14:21,013 - INFO - Processando chunk 185/236
+2025-08-26 16:14:21,367 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:21,410 - INFO - Chunk 185 processado com sucesso
+2025-08-26 16:14:21,411 - INFO - Processando chunk 186/236
+2025-08-26 16:14:22,341 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:22,372 - INFO - Chunk 186 processado com sucesso
+2025-08-26 16:14:22,372 - INFO - Processando chunk 187/236
+2025-08-26 16:14:22,713 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:22,752 - INFO - Chunk 187 processado com sucesso
+2025-08-26 16:14:22,752 - INFO - Processando chunk 188/236
+2025-08-26 16:14:23,155 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:23,178 - INFO - Chunk 188 processado com sucesso
+2025-08-26 16:14:23,178 - INFO - Processando chunk 189/236
+2025-08-26 16:14:23,563 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:23,599 - INFO - Chunk 189 processado com sucesso
+2025-08-26 16:14:23,599 - INFO - Processando chunk 190/236
+2025-08-26 16:14:23,922 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:23,955 - INFO - Chunk 190 processado com sucesso
+2025-08-26 16:14:23,956 - INFO - Processando chunk 191/236
+2025-08-26 16:14:24,377 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:24,405 - INFO - Chunk 191 processado com sucesso
+2025-08-26 16:14:24,406 - INFO - Processando chunk 192/236
+2025-08-26 16:14:24,797 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:24,827 - INFO - Chunk 192 processado com sucesso
+2025-08-26 16:14:24,828 - INFO - Processando chunk 193/236
+2025-08-26 16:14:25,251 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:25,280 - INFO - Chunk 193 processado com sucesso
+2025-08-26 16:14:25,280 - INFO - Processando chunk 194/236
+2025-08-26 16:14:25,642 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:25,667 - INFO - Chunk 194 processado com sucesso
+2025-08-26 16:14:25,667 - INFO - Processando chunk 195/236
+2025-08-26 16:14:26,046 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:26,074 - INFO - Chunk 195 processado com sucesso
+2025-08-26 16:14:26,074 - INFO - Processando chunk 196/236
+2025-08-26 16:14:26,495 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:26,529 - INFO - Chunk 196 processado com sucesso
+2025-08-26 16:14:26,529 - INFO - Processando chunk 197/236
+2025-08-26 16:14:26,896 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:26,918 - INFO - Chunk 197 processado com sucesso
+2025-08-26 16:14:26,918 - INFO - Processando chunk 198/236
+2025-08-26 16:14:27,486 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:27,516 - INFO - Chunk 198 processado com sucesso
+2025-08-26 16:14:27,516 - INFO - Processando chunk 199/236
+2025-08-26 16:14:28,036 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:28,072 - INFO - Chunk 199 processado com sucesso
+2025-08-26 16:14:28,072 - INFO - Processando chunk 200/236
+2025-08-26 16:14:28,425 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:28,449 - INFO - Chunk 200 processado com sucesso
+2025-08-26 16:14:28,449 - INFO - Processando chunk 201/236
+2025-08-26 16:14:28,928 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:28,956 - INFO - Chunk 201 processado com sucesso
+2025-08-26 16:14:28,957 - INFO - Processando chunk 202/236
+2025-08-26 16:14:29,615 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:29,641 - INFO - Chunk 202 processado com sucesso
+2025-08-26 16:14:29,642 - INFO - Processando chunk 203/236
+2025-08-26 16:14:30,265 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:30,294 - INFO - Chunk 203 processado com sucesso
+2025-08-26 16:14:30,294 - INFO - Processando chunk 204/236
+2025-08-26 16:14:30,802 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:30,826 - INFO - Chunk 204 processado com sucesso
+2025-08-26 16:14:30,826 - INFO - Processando chunk 205/236
+2025-08-26 16:14:31,195 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:31,219 - INFO - Chunk 205 processado com sucesso
+2025-08-26 16:14:31,220 - INFO - Processando chunk 206/236
+2025-08-26 16:14:31,694 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:31,726 - INFO - Chunk 206 processado com sucesso
+2025-08-26 16:14:31,726 - INFO - Processando chunk 207/236
+2025-08-26 16:14:32,070 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:32,101 - INFO - Chunk 207 processado com sucesso
+2025-08-26 16:14:32,101 - INFO - Processando chunk 208/236
+2025-08-26 16:14:32,457 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:32,496 - INFO - Chunk 208 processado com sucesso
+2025-08-26 16:14:32,497 - INFO - Processando chunk 209/236
+2025-08-26 16:14:32,868 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:32,898 - INFO - Chunk 209 processado com sucesso
+2025-08-26 16:14:32,898 - INFO - Processando chunk 210/236
+2025-08-26 16:14:33,373 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:33,410 - INFO - Chunk 210 processado com sucesso
+2025-08-26 16:14:33,410 - INFO - Processando chunk 211/236
+2025-08-26 16:14:33,852 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:33,875 - INFO - Chunk 211 processado com sucesso
+2025-08-26 16:14:33,876 - INFO - Processando chunk 212/236
+2025-08-26 16:14:34,190 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:34,215 - INFO - Chunk 212 processado com sucesso
+2025-08-26 16:14:34,215 - INFO - Processando chunk 213/236
+2025-08-26 16:14:34,812 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:34,857 - INFO - Chunk 213 processado com sucesso
+2025-08-26 16:14:34,858 - INFO - Processando chunk 214/236
+2025-08-26 16:14:35,244 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:35,292 - INFO - Chunk 214 processado com sucesso
+2025-08-26 16:14:35,292 - INFO - Processando chunk 215/236
+2025-08-26 16:14:35,577 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:35,610 - INFO - Chunk 215 processado com sucesso
+2025-08-26 16:14:35,610 - INFO - Processando chunk 216/236
+2025-08-26 16:14:35,908 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:35,957 - INFO - Chunk 216 processado com sucesso
+2025-08-26 16:14:35,958 - INFO - Processando chunk 217/236
+2025-08-26 16:14:36,610 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:36,639 - INFO - Chunk 217 processado com sucesso
+2025-08-26 16:14:36,639 - INFO - Processando chunk 218/236
+2025-08-26 16:14:37,034 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:37,067 - INFO - Chunk 218 processado com sucesso
+2025-08-26 16:14:37,067 - INFO - Processando chunk 219/236
+2025-08-26 16:14:37,479 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:37,521 - INFO - Chunk 219 processado com sucesso
+2025-08-26 16:14:37,521 - INFO - Processando chunk 220/236
+2025-08-26 16:14:38,013 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:38,052 - INFO - Chunk 220 processado com sucesso
+2025-08-26 16:14:38,052 - INFO - Processando chunk 221/236
+2025-08-26 16:14:38,494 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:38,526 - INFO - Chunk 221 processado com sucesso
+2025-08-26 16:14:38,526 - INFO - Processando chunk 222/236
+2025-08-26 16:14:38,862 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:38,895 - INFO - Chunk 222 processado com sucesso
+2025-08-26 16:14:38,896 - INFO - Processando chunk 223/236
+2025-08-26 16:14:39,166 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:39,191 - INFO - Chunk 223 processado com sucesso
+2025-08-26 16:14:39,191 - INFO - Processando chunk 224/236
+2025-08-26 16:14:39,496 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:39,523 - INFO - Chunk 224 processado com sucesso
+2025-08-26 16:14:39,523 - INFO - Processando chunk 225/236
+2025-08-26 16:14:46,874 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:46,902 - INFO - Chunk 225 processado com sucesso
+2025-08-26 16:14:46,903 - INFO - Processando chunk 226/236
+2025-08-26 16:14:47,310 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:47,339 - INFO - Chunk 226 processado com sucesso
+2025-08-26 16:14:47,340 - INFO - Processando chunk 227/236
+2025-08-26 16:14:47,705 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:47,726 - INFO - Chunk 227 processado com sucesso
+2025-08-26 16:14:47,726 - INFO - Processando chunk 228/236
+2025-08-26 16:14:48,147 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:48,183 - INFO - Chunk 228 processado com sucesso
+2025-08-26 16:14:48,183 - INFO - Processando chunk 229/236
+2025-08-26 16:14:48,610 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:48,639 - INFO - Chunk 229 processado com sucesso
+2025-08-26 16:14:48,640 - INFO - Processando chunk 230/236
+2025-08-26 16:14:48,910 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:48,936 - INFO - Chunk 230 processado com sucesso
+2025-08-26 16:14:48,937 - INFO - Processando chunk 231/236
+2025-08-26 16:14:49,776 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:49,802 - INFO - Chunk 231 processado com sucesso
+2025-08-26 16:14:49,804 - INFO - Processando chunk 232/236
+2025-08-26 16:14:50,117 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:50,150 - INFO - Chunk 232 processado com sucesso
+2025-08-26 16:14:50,151 - INFO - Processando chunk 233/236
+2025-08-26 16:14:50,467 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:50,500 - INFO - Chunk 233 processado com sucesso
+2025-08-26 16:14:50,501 - INFO - Processando chunk 234/236
+2025-08-26 16:14:51,103 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:51,142 - INFO - Chunk 234 processado com sucesso
+2025-08-26 16:14:51,142 - INFO - Processando chunk 235/236
+2025-08-26 16:14:51,420 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:51,450 - INFO - Chunk 235 processado com sucesso
+2025-08-26 16:14:51,451 - INFO - Processando chunk 236/236
+2025-08-26 16:14:51,767 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-26 16:14:51,802 - INFO - Chunk 236 processado com sucesso
+2025-08-26 16:14:51,803 - INFO - Processamento concluído!
+2025-08-26 16:14:51,804 - INFO - Embeddings criados com sucesso: 236
+2025-08-26 16:14:51,804 - INFO - Embeddings com falha: 0
+2025-08-26 16:14:51,804 - INFO - Total de chunks: 236
+2025-08-26 16:14:51,830 - INFO - Total de documentos na coleção 'documents': 236
+2025-08-26 16:14:51,831 - INFO - Script executado com sucesso!

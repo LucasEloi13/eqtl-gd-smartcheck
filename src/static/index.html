@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Projetos - RAG</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos customizados e configuração do Tailwind -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Animação de fade-in para os resultados */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        /* Estilo para a área de arrastar e soltar arquivos */
+        .drop-zone-active {
+            border-color: #4f46e5;
+            background-color: #312e8120;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200 antialiased">
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <!-- Cabeçalho -->
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-white">Dashboard de Análise de Projetos</h1>
+            <p class="text-slate-400 mt-1">Envie os documentos do projeto para uma análise detalhada via RAG.</p>
+        </header>
+
+        <!-- Conteúdo Principal: Grid de 2 colunas -->
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Coluna da Esquerda: Upload e Ações -->
+            <div class="flex flex-col gap-6">
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                    <h2 class="text-xl font-semibold text-white mb-4">1. Envio de Documentos</h2>
+                    
+                    <!-- Área de Arrastar e Soltar -->
+                    <div id="drop-zone" class="border-2 border-dashed border-slate-600 rounded-lg p-8 text-center cursor-pointer transition-colors duration-300 hover:border-indigo-500 hover:bg-slate-800">
+                        <input type="file" id="file-input" multiple class="hidden">
+                        <div class="flex flex-col items-center">
+                            <!-- Ícone de Upload -->
+                            <svg class="w-12 h-12 text-slate-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l-3.75 3.75M12 9.75l3.75 3.75M3 17.25V8.25c0-1.12.93-2.037 2.07-1.998a12.012 12.012 0 0113.86 0c1.14.039 2.07.878 2.07 1.998v9c0 1.12-.93 2.037-2.07 1.998a12.012 12.012 0 01-13.86 0c-1.14-.039-2.07-.878-2.07-1.998z" />
+                            </svg>
+                            <p class="text-slate-400">Arraste e solte os arquivos aqui</p>
+                            <p class="text-sm text-slate-500 mt-1">ou</p>
+                            <p class="font-semibold text-indigo-400 mt-1">Clique para selecionar</p>
+                            <p class="text-xs text-slate-500 mt-2">Máximo: 10 arquivos (PDF, DOC, DOCX, TXT)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de Arquivos Carregados -->
+                <div id="file-list-container" class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hidden">
+                    <h3 class="font-semibold text-white mb-4">Arquivos Carregados</h3>
+                    <div id="file-list" class="space-y-3">
+                        <!-- Arquivos serão injetados aqui via JS -->
+                    </div>
+                </div>
+
+                <!-- Botão de Ação -->
+                <div class="mt-2">
+                    <button id="analyze-btn" class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-500 transition-all duration-300 flex items-center justify-center gap-3 disabled:bg-slate-600 disabled:cursor-not-allowed">
+                        <!-- Spinner de Carregamento -->
+                        <svg id="spinner" class="animate-spin -ml-1 mr-2 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <span id="button-text">Analisar Documentos</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Coluna da Direita: Resultados da Análise -->
+            <div id="results-section" class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                <!-- Estado Inicial / Placeholder -->
+                <div id="placeholder" class="h-full flex flex-col justify-center items-center text-center">
+                    <svg class="w-16 h-16 text-slate-600 mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/><path d="M2 22h20"/></svg>
+                    <h2 class="text-xl font-semibold text-slate-300">Aguardando análise</h2>
+                    <p class="text-slate-400 mt-2 max-w-sm">Os resultados detalhados do projeto aparecerão aqui assim que a análise for concluída.</p>
+                </div>
+
+                <!-- Container dos Resultados (inicialmente oculto) -->
+                <div id="results-output" class="hidden space-y-6">
+                    <!-- Feedback Final (Badge) -->
+                    <div id="status-badge" class="flex items-center gap-3 p-4 rounded-lg">
+                        <span id="status-icon"></span>
+                        <div class="flex flex-col">
+                           <span id="status-title" class="font-bold text-lg"></span>
+                           <span id="status-text" class="text-sm"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Card: Resumo do Projeto -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">Resumo das Principais Informações</h3>
+                        <div id="summary-content" class="text-sm bg-slate-900/50 p-4 rounded-lg border border-slate-700 space-y-2">
+                            <!-- Conteúdo do resumo injetado aqui -->
+                        </div>
+                    </div>
+                    
+                    <!-- Card: Incongruências -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">Incongruências Encontradas</h3>
+                        <div id="inconsistencies-content" class="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
+                            <!-- Conteúdo das incongruências injetado aqui -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // --- DOM Elements ---
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const fileListContainer = document.getElementById('file-list-container');
+        const fileListDiv = document.getElementById('file-list');
+        const analyzeBtn = document.getElementById('analyze-btn');
+        const spinner = document.getElementById('spinner');
+        const buttonText = document.getElementById('button-text');
+        const placeholder = document.getElementById('placeholder');
+        const resultsOutput = document.getElementById('results-output');
+        const statusBadge = document.getElementById('status-badge');
+        const statusIcon = document.getElementById('status-icon');
+        const statusTitle = document.getElementById('status-title');
+        const statusText = document.getElementById('status-text');
+        const summaryContent = document.getElementById('summary-content');
+        const inconsistenciesContent = document.getElementById('inconsistencies-content');
+
+        let uploadedFiles = [];
+
+        // --- Mock Data (Simulação da resposta da API RAG) ---
+        const mockSuccessData = {
+            status: "Aprovado",
+            summary: {
+                "Empresa responsável": "FELIX ASSESSORIA & SERVIÇOS INTEGRADOS LTDA (Eng. Matheus Pinheiro da Silva Félix – CREA-PA 151998978-4)",
+                "Cliente": "Milton Ferreira de Sousa",
+                "Local": "Travessa João Pessoa, 400 – Centro – Olho D’Água das Cunhãs – MA",
+                "Potência do sistema": "13,09 kWp (módulos)",
+                "Potência nominal do inversor": "10,0 kW",
+                "Modelo do inversor": "SAJ R6-10K-S3-18",
+                "Quantidade de inversores": "1",
+                "Potência dos módulos": "595 W",
+                "Quantidade de módulos": "22",
+                "Modelo dos módulos": "TSUN POWER TS595S8E-144GANT",
+                "Tensão da UC": "220 V monofásico",
+                "Disjuntor de entrada da UC": "63 A",
+                "Disjuntor de proteção do sistema FV": "50 A",
+                "Potência disponibilizada (PD)": "12 kW"
+            },
+            inconsistencies: []
+        };
+
+        const mockWarningData = {
+            status: "Aprovado com Ressalvas",
+            summary: { ...mockSuccessData.summary },
+            inconsistencies: [
+                "O disjuntor de proteção do sistema FV (50 A) está acima do recomendado para um inversor de 10.0 kW em 220V. Sugestão: 45 A.",
+                "A potência disponibilizada (12 kW) é inferior à potência de pico do sistema (13,09 kWp). Verificar com a concessionária a necessidade de aumento da demanda contratada."
+            ]
+        };
+        
+        // --- Event Listeners ---
+        dropZone.addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', (e) => handleFiles(e.target.files));
+
+        // Drag and Drop events
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('drop-zone-active');
+        });
+        dropZone.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('drop-zone-active');
+        });
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('drop-zone-active');
+            handleFiles(e.dataTransfer.files);
+        });
+
+        analyzeBtn.addEventListener('click', startAnalysis);
+
+        // --- Functions ---
+        function handleFiles(files) {
+            const MAX_FILES = 10;
+            
+            for (const file of files) {
+                if (uploadedFiles.length >= MAX_FILES) {
+                    alert(`Limite máximo de ${MAX_FILES} arquivos atingido.`);
+                    break;
+                }
+                
+                // Check file type (optional: only allow PDF, DOC, DOCX, etc.)
+                const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'];
+                if (!allowedTypes.includes(file.type)) {
+                    alert(`Tipo de arquivo não suportado: ${file.name}. Apenas PDF, DOC, DOCX e TXT são aceitos.`);
+                    continue;
+                }
+                
+                if (!uploadedFiles.some(f => f.name === file.name && f.size === file.size)) {
+                    uploadedFiles.push(file);
+                }
+            }
+            updateFileListUI();
+        }
+
+        function updateFileListUI() {
+            if (uploadedFiles.length === 0) {
+                fileListContainer.classList.add('hidden');
+                return;
+            }
+            
+            fileListContainer.classList.remove('hidden');
+            fileListDiv.innerHTML = '';
+
+            uploadedFiles.forEach((file, index) => {
+                const fileElement = document.createElement('div');
+                fileElement.className = 'flex items-center justify-between bg-slate-700/50 p-3 rounded-md text-sm';
+                fileElement.innerHTML = `
+                    <div class="flex items-center gap-3 overflow-hidden">
+                        <svg class="w-5 h-5 text-slate-400 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                        <span class="truncate" title="${file.name}">${file.name}</span>
+                        <span class="text-slate-500 flex-shrink-0">${(file.size / 1024).toFixed(1)} KB</span>
+                    </div>
+                    <button data-index="${index}" class="text-slate-500 hover:text-red-400 p-1 rounded-full transition-colors">
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
+                `;
+                fileListDiv.appendChild(fileElement);
+            });
+
+            // Add event listeners to remove buttons
+            document.querySelectorAll('#file-list button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const indexToRemove = parseInt(e.currentTarget.getAttribute('data-index'));
+                    uploadedFiles.splice(indexToRemove, 1);
+                    updateFileListUI();
+                });
+            });
+        }
+
+        function startAnalysis() {
+            if (uploadedFiles.length === 0) {
+                // Adicionar um feedback visual mais sutil
+                dropZone.classList.add('border-red-500', 'animate-pulse');
+                setTimeout(() => {
+                    dropZone.classList.remove('border-red-500', 'animate-pulse');
+                }, 1500);
+                return;
+            }
+
+            // Enter loading state
+            analyzeBtn.disabled = true;
+            spinner.classList.remove('hidden');
+            buttonText.textContent = 'Analisando...';
+            placeholder.classList.add('hidden');
+            resultsOutput.classList.add('hidden');
+
+            // Prepare FormData for upload
+            const formData = new FormData();
+            uploadedFiles.forEach((file, index) => {
+                formData.append('files', file);
+            });
+
+            // Real API call to backend
+            fetch('/api/analyze', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                renderResults(data);
+                
+                // Exit loading state
+                analyzeBtn.disabled = false;
+                spinner.classList.add('hidden');
+                buttonText.textContent = 'Analisar Outros Documentos';
+                uploadedFiles = []; // Clear files for next analysis
+                updateFileListUI();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Erro ao processar documentos. Tente novamente.');
+                
+                // Exit loading state
+                analyzeBtn.disabled = false;
+                spinner.classList.add('hidden');
+                buttonText.textContent = 'Analisar Documentos';
+            });
+        }
+
+        function renderResults(data) {
+            resultsOutput.classList.remove('hidden');
+            resultsOutput.classList.add('fade-in');
+
+            // 1. Render Status Badge
+            statusBadge.className = 'flex items-center gap-3 p-4 rounded-lg'; // Reset classes
+            
+            const hasInconsistencies = data["Incongruências encontradas"] && data["Incongruências encontradas"].length > 0;
+            
+            if (!hasInconsistencies) {
+                statusBadge.classList.add('bg-green-500/10', 'text-green-400');
+                statusIcon.innerHTML = `<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`;
+                statusTitle.textContent = "Projeto Aprovado";
+                statusText.textContent = "Nenhuma incongruência crítica foi encontrada.";
+            } else {
+                statusBadge.classList.add('bg-yellow-500/10', 'text-yellow-400');
+                statusIcon.innerHTML = `<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>`;
+                statusTitle.textContent = "Projeto Aprovado com Ressalvas";
+                statusText.textContent = "Foram encontrados pontos de atenção. Veja abaixo.";
+            }
+
+            // 2. Render Summary
+            summaryContent.innerHTML = '';
+            
+            // Create summary object excluding inconsistencies
+            const summary = { ...data };
+            delete summary["Incongruências encontradas"];
+            
+            for (const [key, value] of Object.entries(summary)) {
+                if (value && value !== "") {
+                    const item = document.createElement('div');
+                    item.className = 'flex flex-col sm:flex-row sm:justify-between py-2 border-b border-slate-800/50 last:border-b-0';
+                    item.innerHTML = `
+                        <dt class="font-medium text-slate-400">${key}:</dt>
+                        <dd class="text-slate-200 text-left sm:text-right">${value}</dd>
+                    `;
+                    summaryContent.appendChild(item);
+                }
+            }
+
+            // 3. Render Inconsistencies
+            inconsistenciesContent.innerHTML = '';
+            if (hasInconsistencies) {
+                const list = document.createElement('ul');
+                list.className = 'space-y-3 list-inside';
+                data["Incongruências encontradas"].forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'flex items-start gap-3 text-yellow-400';
+                    listItem.innerHTML = `
+                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" /></svg>
+                        <span>${item}</span>
+                    `;
+                    list.appendChild(listItem);
+                });
+                inconsistenciesContent.appendChild(list);
+            } else {
+                inconsistenciesContent.innerHTML = `
+                    <div class="flex items-center gap-3 text-green-400">
+                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        <span>Nenhuma incongruência encontrada.</span>
+                    </div>
+                `;
+            }
+        }
+    </script>
+
+</body>
+</html>
