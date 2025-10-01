@@ -1,0 +1,145 @@
+2025-08-27 08:54:29,083 - INFO - Recebidos 3 arquivos para análise
+2025-08-27 08:54:29,085 - INFO - Arquivo processado: ART.pdf (1660361 bytes)
+2025-08-27 08:54:29,086 - INFO - Arquivo processado: Formulário de Solicitação.pdf (323197 bytes)
+2025-08-27 08:54:29,086 - INFO - Arquivo processado: MEMORIAL TÉCNICO.pdf (719868 bytes)
+2025-08-27 08:54:30,781 - INFO - Provedor openai inicializado com sucesso
+2025-08-27 08:54:31,048 - INFO - Provedor deepseek inicializado com sucesso
+2025-08-27 08:54:35,382 - INFO - ChromaDB configurado em: data\embeddings
+2025-08-27 08:54:35,392 - INFO - Processando arquivo: ART.pdf
+2025-08-27 08:54:44,992 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:46,078 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:48,032 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:48,893 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:49,789 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:50,329 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:50,818 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:52,009 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:52,414 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:53,052 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:53,426 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:54,209 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:54,931 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:55,290 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:56,426 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:57,116 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:57,522 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:57,847 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:58,266 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:59,213 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:59,599 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:54:59,958 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:00,272 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:00,577 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:00,971 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:01,328 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:01,383 - INFO - Arquivo ART.pdf processado: 26 chunks
+2025-08-27 08:55:01,383 - INFO - Processando arquivo: Formulário de Solicitação.pdf
+2025-08-27 08:55:01,833 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:02,200 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:03,186 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:03,573 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:04,291 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:04,670 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:05,081 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:05,540 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:06,095 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:06,579 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:07,003 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:07,380 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:07,734 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:08,155 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:08,607 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:08,641 - INFO - Arquivo Formulário de Solicitação.pdf processado: 15 chunks
+2025-08-27 08:55:08,642 - INFO - Processando arquivo: MEMORIAL TÉCNICO.pdf
+2025-08-27 08:55:09,365 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:09,806 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:10,972 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:11,453 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:11,863 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:12,328 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:12,740 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:13,219 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:13,684 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:14,197 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:14,603 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:15,212 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:15,585 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:16,152 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:16,640 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:17,029 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:17,494 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:17,882 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:18,172 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:18,461 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:18,847 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:19,236 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:19,594 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:19,961 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:20,460 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:20,891 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:21,289 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:21,829 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:22,277 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:22,692 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:22,741 - INFO - Arquivo MEMORIAL TÉCNICO.pdf processado: 30 chunks
+2025-08-27 08:55:22,742 - INFO - Total de chunks processados: 71
+2025-08-27 08:55:23,121 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:23,603 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 08:55:35,451 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-27 08:55:35,458 - ERROR - Erro ao decodificar JSON: Expecting value: line 1 column 1 (char 0)
+2025-08-27 08:55:35,459 - ERROR - Resposta recebida: Para realizar uma análise dos documentos do projeto com base na norma técnica fornecida (NT.00020.EQTL-05), é importante considerar os principais pontos abordados na norma, que estabelece critérios, padrões e requisitos técnicos para a conexão de micro e minigeração distribuída ao sistema de distribuição de energia elétrica. Abaixo, estão algumas informações extraídas e analisadas:
+
+### 1. **Finalidade da Norma**
+A norma visa facilitar o acesso de unidades consumidoras de micro e minigeração distribuída ao sistema de compensação de energia elétrica, estabelecendo critérios e requisitos técnicos mínimos.
+
+### 2. **Campo de Aplicação**
+A norma aplica-se a acessantes com micro ou mini geração distribuída de fontes renováveis ou cogeração qualificada, conectados à rede de distribuição da concessionária. Não se aplica a consumidores livres ou geradores de fontes não renováveis.
+
+### 3. **Requisitos Técnicos e Operacionais**
+- Os sistemas de geração distribuída devem atender aos critérios técnicos descritos nos módulos do PRODIST, especialmente nas seções relacionadas à qualidade da energia elétrica.
+- É exigido que as centrais geradoras utilizem fontes renováveis ou cogeração qualificada.
+- A concessionária pode exigir a instalação de sistemas de proteção específicos, especialmente em sistemas subterrâneos.
+
+### 4. **Conexão de Micro e Minigeração**
+- A norma detalha as características construtivas e técnicas para a conexão de sistemas de geração, incluindo a necessidade de estudos prévios de viabilidade técnica em configurações de rede diferentes da recomendada.
+- A instalação deve operar dentro dos limites de qualidade de energia elétrica estabelecidos.
+
+### 5. **Modelos de Conexão**
+- A norma fornece diagramas unifilares que ilustram os modelos de conexão para diferentes potências e tipos de sistemas, tanto com quanto sem uso de inversores.
+- A utilização de fonte auxiliar para alimentação do sistema de proteção é obrigatória.
+
+### 6. **Obrigações da Concessionária**
+- A concessionária deve aprovar o orçamento de conexão e garantir a execução das obras necessárias para a conexão da micro ou mini geração, conforme as condições acordadas com o consumidor.
+
+### 7. **Documentação Necessária**
+- É necessário apresentar cálculos que demonstrem a potência instalada e a adequação da conexão, além de informações adicionais que possam ser solicitadas pela concessionária.
+
+### 8. **Condições de Operação**
+- As unidades consumidoras com geração distribuída podem operar em modo de ilha, desde que desconectadas fisicamente da rede de distribuição.
+
+### 9. **Limitações e Proibições**
+- É vedada a divisão de centrais geradoras em unidades de menor porte para se enquadrar nos limites de potência da micro ou mini geração distribuída.
+
+### Conclusão
+A norma técnica NT.00020.EQTL-05 é abrangente e estabelece um quadro regulatório claro para a conexão de micro e minigeração distribuída ao sistema de distribuição, enfatizando a necessidade de conformidade com requisitos técnicos, a importância de estudos de viabilidade e a responsabilidade da concessionária em gerenciar o processo de conexão. É fundamental que todos os envolvidos no projeto estejam cientes dessas diretrizes para garantir a conformidade e a eficiência na implementação das soluções de geração distribuída.
+2025-08-27 08:55:35,460 - ERROR - Erro na análise de documentos: Resposta da AI não está em formato JSON válido
+2025-08-27 08:55:35,460 - ERROR - Erro na análise de documentos: Resposta da AI não está em formato JSON válido
+2025-08-27 09:14:24,324 - INFO - Provedor openai inicializado com sucesso
+2025-08-27 09:14:24,564 - INFO - Provedor deepseek inicializado com sucesso
+2025-08-27 09:14:27,028 - INFO - ChromaDB configurado em: data\embeddings
+2025-08-27 09:14:31,477 - INFO - Recebidos 1 arquivos para análise
+2025-08-27 09:14:31,477 - INFO - Arquivo processado: projeto_teste.txt (898 bytes)
+2025-08-27 09:14:31,477 - INFO - Processando arquivo: projeto_teste.txt
+2025-08-27 09:14:40,008 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 09:14:40,127 - INFO - Arquivo projeto_teste.txt processado: 1 chunks
+2025-08-27 09:14:40,127 - INFO - Total de chunks processados: 1
+2025-08-27 09:14:40,874 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 09:14:41,325 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-08-27 09:14:45,930 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-27 09:14:45,944 - INFO - JSON extraído: {
+    "Empresa responsável": "FELIX ASSESSORIA & SERVIÇOS INTEGRADOS LTDA",
+    "Cliente": "Milton Ferreira de Sousa",
+    "Local": "Travessa João Pessoa, 400 – Centro – Olho D'Água das Cunhãs – MA",
+...
+2025-08-27 09:14:45,944 - INFO - Análise concluída com sucesso
+2025-08-27 09:14:45,944 - INFO - Análise concluída com sucesso

@@ -37,21 +37,15 @@ class AIProviderManager:
     def _initialize_providers(self):
         """Inicializa provedores disponíveis"""
         ai_config = self.config.get('ai_providers', {})
-        logger.info(f"Inicializando provedores AI: {list(ai_config.keys())}")
         
         # OpenAI
         if 'openai' in ai_config:
             try:
                 openai_config = ai_config['openai']
-                logger.info(f"Configuração OpenAI: {openai_config}")
-                api_key_env = openai_config.get('api_key_env', 'OPENAI_API_KEY')
-                api_key = os.getenv(api_key_env)
-                logger.info(f"API Key OpenAI encontrada: {bool(api_key)}")
+                api_key = os.getenv(openai_config['api_key_env'])
                 if api_key:
                     self.providers['openai'] = OpenAI(api_key=api_key)
                     logger.info("Provedor openai inicializado com sucesso")
-                else:
-                    logger.warning(f"API Key não encontrada para {api_key_env}")
             except Exception as e:
                 logger.error(f"Erro ao inicializar OpenAI: {e}")
         
@@ -59,22 +53,15 @@ class AIProviderManager:
         if 'deepseek' in ai_config:
             try:
                 deepseek_config = ai_config['deepseek']
-                logger.info(f"Configuração DeepSeek: {deepseek_config}")
-                api_key_env = deepseek_config.get('api_key_env', 'DEEPSEEK_API_KEY')
-                api_key = os.getenv(api_key_env)
-                logger.info(f"API Key DeepSeek encontrada: {bool(api_key)}")
+                api_key = os.getenv(deepseek_config['api_key_env'])
                 if api_key:
                     self.providers['deepseek'] = OpenAI(
                         api_key=api_key,
                         base_url=deepseek_config['base_url']
                     )
                     logger.info("Provedor deepseek inicializado com sucesso")
-                else:
-                    logger.warning(f"API Key não encontrada para {api_key_env}")
             except Exception as e:
                 logger.error(f"Erro ao inicializar DeepSeek: {e}")
-        
-        logger.info(f"Provedores inicializados: {list(self.providers.keys())}")
     
     def get_available_providers(self) -> List[str]:
         """Retorna lista de provedores disponíveis"""

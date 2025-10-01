@@ -2,6 +2,7 @@
 
 ai_providers:
   openai:
+    api_key_env: "OPENAI_API_KEY"
     base_url: "https://api.openai.com/v1"
     models:
       chat: "gpt-4o-mini"
@@ -10,62 +11,65 @@ ai_providers:
     temperature: 0.5
   
   deepseek:
+    api_key_env: "DEEPSEEK_API_KEY"
     base_url: "https://api.deepseek.com/v1"
     models:
       chat: "deepseek-chat"
     max_tokens: 4096
     temperature: 0.5
 
-# Definição da persona que o modelo deve assumir
-persona: |
-  Você é um analista da Equatorial Energia e trabalha na área de geração distribuída.
-  Você analisa documentação de projetos com base na norma técnica vigente (fornecida como contexto).
-
-# Descrição da tarefa a ser executada
-task: |
-  Com base nessas normas você deve analisar os projetos e encontrar pontos que estão fora da norma ou incongruências,
-  por exemplo, valores de potência informado, valores de disjuntor, nome/modelo de inversor, nome de projetista ou cliente diferente entre documentos ou no mesmo documento.
-  Aponte qualquer incongruência que você encontrar caso tenha alguma.
-
-# Instruções sobre o formato da saída
-output_format:
-  type: json
-  strict: true # Força o modelo a retornar apenas o JSON
-  instructions: "Extrai e retorne EXCLUSIVAMENTE UM JSON no formato abaixo (sem texto adicional). Se não encontrar algum campo, deixe string vazia \"\"."
-  schema:
-    type: object
-    properties:
-      Empresa responsável: { type: "string" }
-      Cliente: { type: "string" }
-      Local: { type: "string" }
-      "Potência do sistema": { type: "string" }
-      "Potência nominal do inversor": { type: "string" }
-      "Modelo do inversor": { type: "string" }
-      "Quantidade de inversores": { type: "string" }
-      "Potência dos módulos": { type: "string" }
-      "Quantidade de módulos": { type: "string" }
-      "Modelo dos módulos": { type: "string" }
-      "Tensão da UC": { type: "string" }
-      "Disjuntor de entrada da UC": { type: "string" }
-      "Disjuntor de proteção do sistema FV (saída do inversor)": { type: "string" }
-      "Potência disponibilizada (PD)": { type: "string" }
-      "Incongruências encontradas":
-        type: "array"
-        items:
-          type: "string"
-    required:
-      - "Empresa responsável"
-      - "Cliente"
-      - "Local"
-      - "Potência do sistema"
-      - "Potência nominal do inversor"
-      - "Modelo do inversor"
-      - "Quantidade de inversores"
-      - "Potência dos módulos"
-      - "Quantidade de módulos"
-      - "Modelo dos módulos"
-      - "Tensão da UC"
-      - "Disjuntor de entrada da UC"
-      - "Disjuntor de proteção do sistema FV (saída do inversor)"
-      - "Potência disponibilizada (PD)"
-      - "Incongruências encontradas"
+prompt_config:
+  # ID único e versão do prompt para rastreamento
+  id: analise_projeto_gd_v1
+  description: "Analisa documentos de projetos de energia solar com base em normas técnicas e extrai informações chave, apontando incongruências."
+  # Definição da persona que o modelo deve assumir
+  persona: |
+    Você é um analista da Equatorial Energia e trabalha na área de geração distribuída.
+    Você analisa documentação de projetos com base na norma técnica vigente (fornecida como contexto).
+  # Descrição da tarefa a ser executada
+  task: |
+    Com base nessas normas você deve analisar os projetos e encontrar pontos que estão fora da norma ou incongruências,
+    por exemplo, valores de potência informado, valores de disjuntor, nome/modelo de inversor, nome de projetista ou cliente diferente entre documentos ou no mesmo documento.
+    Aponte qualquer incongruência que você encontrar caso tenha alguma.
+  # Instruções sobre o formato da saída
+  output_format:
+    type: json
+    strict: true # Força o modelo a retornar apenas o JSON
+    instructions: "Extrai e retorne EXCLUSIVAMENTE UM JSON no formato abaixo (sem texto adicional). Se não encontrar algum campo, deixe string vazia \"\"."
+    schema:
+      type: object
+      properties:
+        Empresa responsável: { type: "string" }
+        Cliente: { type: "string" }
+        Local: { type: "string" }
+        "Potência do sistema": { type: "string" }
+        "Potência nominal do inversor": { type: "string" }
+        "Modelo do inversor": { type: "string" }
+        "Quantidade de inversores": { type: "string" }
+        "Potência dos módulos": { type: "string" }
+        "Quantidade de módulos": { type: "string" }
+        "Modelo dos módulos": { type: "string" }
+        "Tensão da UC": { type: "string" }
+        "Disjuntor de entrada da UC": { type: "string" }
+        "Disjuntor de proteção do sistema FV (saída do inversor)": { type: "string" }
+        "Potência disponibilizada (PD)": { type: "string" }
+        "Incongruências encontradas":
+          type: "array"
+          items:
+            type: "string"
+      required:
+        - "Empresa responsável"
+        - "Cliente"
+        - "Local"
+        - "Potência do sistema"
+        - "Potência nominal do inversor"
+        - "Modelo do inversor"
+        - "Quantidade de inversores"
+        - "Potência dos módulos"
+        - "Quantidade de módulos"
+        - "Modelo dos módulos"
+        - "Tensão da UC"
+        - "Disjuntor de entrada da UC"
+        - "Disjuntor de proteção do sistema FV (saída do inversor)"
+        - "Potência disponibilizada (PD)"
+        - "Incongruências encontradas"

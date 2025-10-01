@@ -1,178 +1,360 @@
-# Sistema de Embeddings para Documentos PDF
+# 🏗️ Sistema RAG para Análise de Projetos de Microgeração Distribuída
 
-Este projeto contém um sistema completo para gerar e consultar embeddings de documentos PDF usando OpenAI e ChromaDB.
+Sistema inteligente para análise automatizada de documentos de projetos de energia solar com base na norma técnica NT.00020.EQTL-05 da Equatorial Energia.
 
-## Arquivos Principais
+## 🎯 Objetivo
 
-### 1. `generate_embeddings.py`
-Script principal para gerar embeddings do PDF e armazenar no ChromaDB.
+Automatizar a análise de conformidade de projetos de microgeração distribuída, identificando incongruências técnicas e extraindo informações estruturadas dos documentos.
 
-**Funcionalidades:**
-- Extrai texto do PDF localizado em `data/documents/`
-- Divide o texto em chunks de 1000 caracteres com sobreposição de 200 caracteres
-- Gera embeddings usando o modelo `text-embedding-3-small` da OpenAI
-- Armazena os embeddings no ChromaDB com metadados
+## 🔧 Arquitetura do Sistema
 
-**Como executar:**
+```mermaid
+graph TB
+    subgraph "Frontend"
+        UI[Interface Web] --> Upload[Upload de Documentos]
+        Upload --> Display[Exibição de Resultados]
+    end
+    
+    subgraph "API Layer"
+        FastAPI[FastAPI Server]
+        FastAPI --> Health[/api/health]
+        FastAPI --> Status[/api/status] 
+        FastAPI --> Analyze[/api/analyze]
+    end
+    
+    subgraph "RAG System Core"
+        RAG[Sistema RAG]
+        RAG --> AIManager[AI Provider Manager]
+        RAG --> DocProcessor[Document Processor]
+        RAG --> Memory[Processamento em Memória]
+    end
+    
+    subgraph "AI Providers"
+        OpenAI[OpenAI API]
+        DeepSeek[DeepSeek API]
+        AIManager --> OpenAI
+        AIManager --> DeepSeek
+    end
+    
+    subgraph "Storage"
+        ChromaDB[(ChromaDB<br/>NT.00020 Embeddings)]
+        InMemory[Memória<br/>Project Embeddings]
+    end
+    
+    subgraph "Documents"
+        Norm[Norma NT.00020<br/>📋 Permanente]
+        Project[Documentos do Projeto<br/>📄 Temporário]
+    end
+    
+    UI --> FastAPI
+    FastAPI --> RAG
+    RAG --> ChromaDB
+    RAG --> InMemory
+    Norm --> ChromaDB
+    Project --> Memory
+    DocProcessor --> Memory
+```
+
+## 🧠 Fluxo de Processamento
+
+### 1. **Inicialização do Sistema**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│  Load Config    │ →  │  Setup ChromaDB │ →  │ Initialize AI   │
+│  (config.yaml)  │    │  (NT.00020)     │    │  Providers      │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+### 2. **Processamento de Documentos**
+```
+📄 Upload de Documentos
+    ↓
+🔍 Extração de Texto (PDF/DOCX/TXT)
+    ↓
+✂️ Divisão em Chunks
+    ↓
+🤖 Geração de Embeddings (OpenAI/DeepSeek)
+    ↓
+💾 Armazenamento em Memória (Temporário)
+```
+
+### 3. **Análise RAG**
+```
+🔍 Query: "Análise de conformidade"
+    ↓
+┌─────────────────────────────────────────────────────────┐
+│                    RAG Analysis                          │
+├─────────────────────┬───────────────────────────────────┤
+│  📋 Contexto da     │  📄 Contexto do Projeto          │
+│     Norma NT.00020  │     (Documentos Upload)          │
+│  (ChromaDB)         │  (Memória)                        │
+└─────────────────────┴───────────────────────────────────┘
+    ↓
+🤖 Análise por IA (OpenAI/DeepSeek)
+    ↓
+📊 JSON Estruturado + Incongruências
+```
+
+## 🏛️ Estrutura do Projeto
+
+```
+eqtl-gd-smartcheck/
+├── 📁 src/
+│   └── 📁 static/
+│       └── 📄 index.html          # Interface web
+├── 📁 data/
+│   ├── 📁 documents/
+│   │   └── 📄 NT.00020.pdf        # Norma técnica
+│   └── 📁 embeddings/             # ChromaDB storage
+├── 📁 logs/                       # Logs do sistema
+├── 📄 app.py                      # FastAPI server
+├── 📄 rag_system.py              # Sistema RAG core
+├── 📄 generate_embeddings.py     # Script para gerar embeddings da norma
+├── 📄 test_system.py             # Testes automatizados
+├── 📄 config.yaml                # Configurações
+├── 📄 .env                       # Variáveis de ambiente
+└── 📄 requirements.txt           # Dependências
+```
+
+## ⚙️ Componentes Técnicos
+
+### 🤖 **AI Provider Manager**
+- **Função**: Gerencia provedores de IA de forma agnóstica
+- **Suporte**: OpenAI e DeepSeek APIs
+- **Recursos**: 
+  - Geração de embeddings
+  - Análise de texto via chat completion
+  - Fallback entre provedores
+
+### 📄 **Document Processor**
+- **Formatos Suportados**: PDF, DOCX, TXT
+- **Bibliotecas**: PyPDF2, python-docx
+- **Processamento**: Extração de texto, divisão em chunks
+
+### 🗄️ **Storage Strategy**
+- **Norma NT.00020**: ChromaDB (persistente)
+- **Documentos do Projeto**: Memória (temporário)
+- **Vantagem**: Performance + economia de storage
+
+### 🔍 **RAG (Retrieval-Augmented Generation)**
+- **Busca**: Similarity search no ChromaDB
+- **Contexto**: Combinação norma + projeto
+- **Output**: JSON estruturado com incongruências
+
+## 🛠️ Instalação e Configuração
+
+### 1. **Pré-requisitos**
+```bash
+Python 3.8+
+Git
+```
+
+### 2. **Clonagem e Setup**
+```bash
+git clone <repository>
+cd eqtl-gd-smartcheck
+```
+
+### 3. **Ambiente Virtual**
+```bash
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+# source .venv/bin/activate  # Linux/Mac
+```
+
+### 4. **Instalação de Dependências**
+```bash
+pip install -r requirements.txt
+```
+
+### 5. **Configuração de Variáveis de Ambiente**
+Crie/edite o arquivo `.env`:
+```env
+# AI Provider Configuration
+OPENAI_API_KEY=sua_chave_openai_aqui
+DEEPSEEK_API_KEY=sua_chave_deepseek_aqui
+
+# Embedding Configuration
+EMBEDDING_MODEL=text-embedding-3-small
+EMBEDDING_DIMENSIONS=1536
+```
+
+### 6. **Geração de Embeddings da Norma**
 ```bash
 python generate_embeddings.py
 ```
 
-### 2. `query_embeddings.py`
-Script para consultar os embeddings armazenados.
-
-**Funcionalidades:**
-- Busca semântica por similaridade
-- Busca por metadados
-- Estatísticas da coleção
-
-**Como executar:**
+### 7. **Inicialização do Servidor**
 ```bash
-python query_embeddings.py
+python -m uvicorn app:app --reload --host 127.0.0.1 --port 8000
 ```
 
-### 3. `interactive_search.py`
-Interface interativa para realizar buscas nos embeddings.
+### 8. **Acesso ao Sistema**
+```
+http://127.0.0.1:8000
+```
 
-**Funcionalidades:**
-- Interface de linha de comando interativa
-- Busca por palavras-chave
-- Contexto para perguntas
-- Comandos especiais (stats, help, quit)
+## 🧪 Testes
 
-**Como executar:**
+### **Execução de Testes**
 ```bash
-python interactive_search.py
+python test_system.py
 ```
 
-## Configuração
+### **Testes Disponíveis**
+- ✅ **Health Check**: Verificação de saúde do sistema
+- ✅ **Status**: Estado dos provedores AI e base de dados
+- ✅ **Análise**: Teste completo com documento exemplo
 
-### Arquivos de Configuração
+## 📋 Formato de Resposta
 
-#### `.env`
-Contém as variáveis de ambiente necessárias:
-```
-AI_PROVIDER=openai
-OPENAI_API_KEY=sua_chave_aqui
-EMBEDDING_MODEL=text-embedding-3-small
-EMBEDDING_DIMENSIONS=1536
-VECTOR_DB_PATH=./data/embeddings
-COLLECTION_NAME=documents
-```
-
-#### `config.yaml`
-Configurações dos provedores de AI:
-```yaml
-ai_providers:
-  openai:
-    base_url: "https://api.openai.com/v1"
-    models:
-      chat: "gpt-4o-mini"
-      embedding: "text-embedding-3-small"
-    max_tokens: 4096
-    temperature: 0.5
-```
-
-## Estrutura de Dados
-
-### ChromaDB
-Os embeddings são armazenados no diretório `data/embeddings/` com a seguinte estrutura:
-
-**Metadados por chunk:**
-- `source`: Nome do arquivo PDF
-- `chunk_index`: Índice do chunk no documento
-- `chunk_size`: Tamanho do chunk em caracteres
-- `total_chunks`: Total de chunks do documento
-- `file_path`: Caminho completo do arquivo
-
-### Documento Processado
-- **Arquivo:** `NT.00020.EQTL-05-Conexao-de-Micro-e-Minigeracao-Distribuida-ao-Sistema-de-Distribuicao.pdf`
-- **Total de chunks:** 236
-- **Caracteres extraídos:** 200,276
-- **Modelo de embedding:** text-embedding-3-small
-- **Dimensões:** 1536
-
-## Logs
-
-Os logs são salvos em `logs/embeddings.log` e incluem:
-- Informações sobre o processamento
-- Estatísticas de chunks criados
-- Errors e warnings
-- Requisições HTTP para a API da OpenAI
-
-## Dependências
-
-```
-chromadb
-PyPDF2
-openai
-python-dotenv
-pyyaml
-langchain
-langchain-openai
-langchain-community
+### **Estrutura JSON de Saída**
+```json
+{
+  "Empresa responsável": "string",
+  "Cliente": "string", 
+  "Local": "string",
+  "Potência do sistema": "string",
+  "Potência nominal do inversor": "string",
+  "Modelo do inversor": "string",
+  "Quantidade de inversores": "string",
+  "Potência dos módulos": "string",
+  "Quantidade de módulos": "string",
+  "Modelo dos módulos": "string",
+  "Tensão da UC": "string",
+  "Disjuntor de entrada da UC": "string",
+  "Disjuntor de proteção do sistema FV (saída do inversor)": "string",
+  "Potência disponibilizada (PD)": "string",
+  "Incongruências encontradas": [
+    "Descrição da incongruência 1",
+    "Descrição da incongruência 2"
+  ]
+}
 ```
 
-## Exemplos de Uso
+## 🔧 APIs Disponíveis
 
-### Busca Semântica
-```python
-from query_embeddings import EmbeddingQuerier
-
-querier = EmbeddingQuerier()
-results = querier.search_similar_documents("conexão de microgeração distribuída", n_results=3)
+### **GET /api/health**
+Verifica saúde do sistema
+```json
+{
+  "status": "healthy",
+  "ai_providers": ["openai", "deepseek"],
+  "collection_count": 308
+}
 ```
 
-### Busca por Metadados
-```python
-metadata_filter = {"source": "NT.00020.EQTL-05-Conexao-de-Micro-e-Minigeracao-Distribuida-ao-Sistema-de-Distribuicao.pdf"}
-results = querier.search_by_metadata(metadata_filter, n_results=5)
+### **GET /api/status**
+Status detalhado do sistema
+```json
+{
+  "ai_providers": ["openai", "deepseek"],
+  "collection_name": "documents", 
+  "total_documents": 308,
+  "vector_db_path": "./data/embeddings"
+}
 ```
 
-### Interface Interativa
+### **POST /api/analyze**
+Análise de documentos
+- **Input**: Multipart form com arquivos
+- **Output**: JSON estruturado + incongruências
+
+## 🎯 Exemplos de Incongruências Detectadas
+
+1. **Potência do Sistema vs Inversor**
+   - Sistema: 13,09 kWp
+   - Inversor: 10,0 kW
+   - ❌ Sistema maior que capacidade do inversor
+
+2. **Potência Disponibilizada vs Nominal**
+   - PD: 12 kW
+   - Nominal: 10,0 kW
+   - ❌ PD incompatível com inversor
+
+3. **Dados Inconsistentes**
+   - Nomes diferentes entre documentos
+   - Modelos incorretos
+   - Valores conflitantes
+
+## 🚀 Tecnologias Utilizadas
+
+### **Backend**
+- **FastAPI**: Framework web moderno
+- **ChromaDB**: Vector database
+- **OpenAI/DeepSeek**: APIs de IA
+- **PyPDF2/python-docx**: Processamento de documentos
+
+### **Frontend**
+- **HTML5 + JavaScript**: Interface web
+- **Tailwind CSS**: Estilização
+- **Fetch API**: Comunicação com backend
+
+### **AI/ML**
+- **RAG (Retrieval-Augmented Generation)**: Arquitetura principal
+- **Text Embeddings**: Busca semântica
+- **Large Language Models**: Análise e extração
+
+## 📊 Performance
+
+### **Processamento**
+- ⚡ Embeddings da norma: Pré-processados (uma vez)
+- ⚡ Documentos do projeto: Processamento em memória
+- ⚡ Análise: ~10-30 segundos por projeto
+
+### **Capacidade**
+- 📄 Até 10 documentos por análise
+- 📋 Suporte a PDF, DOCX, TXT
+- 🗄️ Base persistente com 308+ chunks da norma
+
+## 🔐 Segurança
+
+- 🔑 Chaves de API protegidas via variáveis de ambiente
+- 🗃️ Documentos do projeto não armazenados permanentemente
+- 🔒 Processamento local dos embeddings
+
+## 🐛 Troubleshooting
+
+### **Problema: Provedores AI vazios**
 ```bash
-python interactive_search.py
-# Digite consultas como:
-# - "requisitos para conexão"
-# - "proteção elétrica"
-# - "normas técnicas"
+# Verificar variáveis de ambiente
+python -c "import os; print('OpenAI:', bool(os.getenv('OPENAI_API_KEY')))"
 ```
 
-## Estatísticas do Processamento
-
-- ✅ **236 embeddings** criados com sucesso
-- ✅ **0 falhas** no processamento
-- ✅ **236 chunks** processados
-- ✅ **Total de documentos** na coleção: 236
-
-## Comandos de Terminal Úteis
-
-### Gerar embeddings:
+### **Problema: ChromaDB não encontra documentos**
 ```bash
-& "C:/Users/u12283/Documents/LUCAS ELOI/eqtl-gd-smartcheck/.venv/Scripts/python.exe" generate_embeddings.py
+# Regenerar embeddings da norma
+python generate_embeddings.py
 ```
 
-### Consultar embeddings:
+### **Problema: Servidor não inicia**
 ```bash
-& "C:/Users/u12283/Documents/LUCAS ELOI/eqtl-gd-smartcheck/.venv/Scripts/python.exe" query_embeddings.py
+# Verificar dependências
+pip install -r requirements.txt
+
+# Verificar porta
+netstat -an | findstr :8000
 ```
 
-### Busca interativa:
-```bash
-& "C:/Users/u12283/Documents/LUCAS ELOI/eqtl-gd-smartcheck/.venv/Scripts/python.exe" interactive_search.py
-```
+## 🤝 Contribuição
 
-## Observações
+1. Fork do projeto
+2. Criar branch para feature (`git checkout -b feature/nova-funcionalidade`)
+3. Commit das mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para branch (`git push origin feature/nova-funcionalidade`)
+5. Criar Pull Request
 
-1. **API Key**: Certifique-se de que a chave da OpenAI está configurada corretamente no arquivo `.env`
-2. **Modelo**: O sistema usa especificamente o modelo `text-embedding-3-small` conforme especificado
-3. **Persistência**: Os embeddings são salvos permanentemente no ChromaDB e podem ser reutilizados
-4. **Performance**: O processamento inicial pode demorar alguns minutos devido às chamadas da API
-5. **Custos**: Cada embedding gera uma requisição para a API da OpenAI
+## 📝 Licença
 
-## Próximos Passos
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
-- Implementar cache para embeddings de consultas frequentes
-- Adicionar suporte para múltiplos documentos
-- Criar interface web para consultas
-- Implementar sistema de RAG (Retrieval Augmented Generation)
+## 📞 Suporte
+
+Para dúvidas ou problemas:
+- 📧 Email: suporte@equatorialenergia.com.br
+- 📋 Issues: GitHub Issues
+- 📖 Documentação: Este README
+
+---
+
+**Desenvolvido com ❤️ para Equatorial Energia - Geração Distribuída**
