@@ -42,6 +42,11 @@ app.add_middleware(
 # Servir arquivos estáticos
 app.mount("/static", StaticFiles(directory="src/static"), name="static")
 
+@app.get("/")
+@app.head("/")
+def root():
+    return {"status": "ok"}
+
 @app.get("/", response_class=HTMLResponse)
 async def read_root():
     """Serve a página principal"""
