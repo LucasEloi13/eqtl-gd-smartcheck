@@ -11,15 +11,6 @@ services:
         sync: false
       - key: DEEPSEEK_API_KEY
         sync: false
-      - key: EMBEDDING_MODEL
-        value: text-embedding-3-small
-      - key: EMBEDDING_DIMENSIONS
-        value: "1536"
-      - key: PYTHONPATH
-        value: /opt/render/project/src
-      - key: PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION
-        value: python
-    autoDeploy: true
     disk:
       name: data
       mountPath: /opt/render/project/src/data
