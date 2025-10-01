@@ -42,10 +42,27 @@ app.add_middleware(
 # Servir arquivos estáticos
 app.mount("/static", StaticFiles(directory="src/static"), name="static")
 
-@app.get("/")
+
+@app.get("/", response_class=HTMLResponse)
 @app.head("/")
-def root():
-    return {"status": "ok"}
+async def read_root():
+    """Serve a página principal"""
+    try:
+        html_path = Path("src/static/index.html")
+        if html_path.exists():
+            return HTMLResponse(content=html_path.read_text(encoding='utf-8'))
+        else:
+            return HTMLResponse(content="""
+            <html>
+                <body>
+                    <h1>Sistema RAG</h1>
+                    <p>Arquivo index.html não encontrado em src/static/</p>
+                </body>
+            </html>
+            """)
+    except Exception as e:
+        logger.error(f"Erro ao servir página principal: {e}")
+        return HTMLResponse(content=f"<html><body><h1>Erro: {str(e)}</h1></body></html>")
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root():
